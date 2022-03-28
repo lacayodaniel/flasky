@@ -128,3 +128,18 @@ def find_confidence_limit(model,filecsv='Test.csv', mb=1):
 # implement accuracy graph for tons of images
 # backup to github
 # deploy with amazon web services, check out heuroku first, how much is that?
+
+@app.route('/quotes')
+def quotes():
+    # load in quotes from csv
+    # or use sql to store quote objects?
+    # class Qoute(Author, Material, When)
+
+    # for now it's done statically
+    quotes = [("Brian Estes",
+    "When it first came out, the internet was worthless, then it was priceless.\
+    BTC was worthless and now we're seeing it's priceless.",
+    "11/2021")]
+
+    return '<h1>Quotes</h1>\
+    <p>"{}"</p><p>{}</p><p>{}</p>'.format(quotes[0][1],quotes[0][0],quotes[0][2])
