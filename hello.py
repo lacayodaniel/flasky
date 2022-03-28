@@ -22,7 +22,7 @@ def user(name):
 
 # generating matplotlib figures guide
 # https://matplotlib.org/devdocs/gallery/user_interfaces/web_application_server_sgskip.html
-@app.route('/hello')
+@app.route('/graph')
 def hello():
     # Generate the figure **without using pyplot**.
     fig = Figure()
